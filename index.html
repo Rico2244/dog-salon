@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title>Your Dog Salon</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#booking">Book an Appointment</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero"></section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="owl-carousel owl-theme">
+        <!-- Service cards go here -->
+        <div class="service-card">
+          <div
+            class="service-image"
+            style="background-image: url('imgs/img1.png')"
+          ></div>
+          <h3>Full Grooming</h3>
+          <p>
+            Our full grooming package includes a bath, haircut, nail trimming,
+            and more. Your dog will leave looking and feeling their best.
+          </p>
+          <span class="price">$50</span>
+        </div>
+        <div class="service-card">
+          <div
+            class="service-image"
+            style="background-image: url('imgs/img2.png')"
+          ></div>
+          <h3>Bath & Brush</h3>
+          <p>
+            Keep your dog clean and fresh with our bath and brush service. We
+            use high-quality products to ensure a shiny coat and healthy skin.
+          </p>
+          <span class="price">$30</span>
+        </div>
+        <div class="service-card">
+          <div
+            class="service-image"
+            style="background-image: url('imgs/img3.png')"
+          ></div>
+          <h3>Pet Spa Day</h3>
+          <p>
+            Pamper your furry friend with our luxurious pet spa day. This
+            package includes a relaxing bath, grooming, a soothing massage, and
+            a special treat for your pet.
+          </p>
+          <span class="price">$250</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="styled-section" id="about">
+      <h2>About Us</h2>
+      <p>
+        We are a passionate team of dog lovers dedicated to providing top-notch
+        grooming services. With years of experience, we ensure that your dog has
+        a comfortable and enjoyable experience during their visit.
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery-image">
+        <img src="imgs/img4.png" alt="Main Gallery Image" />
+      </div>
+    </section>
+
+    <section id="contact" class="styled-section">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <div class="opening-hours">
+          <h3>Opening Hours</h3>
+          <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+          <p>Saturday: 9:00 AM - 4:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+      <section id="booking">
+        <h1>Book an Appointment</h1>
+        <div class="booking-form">
+          <form action="#" method="post">
+            <label for="dog-name">Dog's Name</label>
+            <input type="text" id="dog-name" name="dog-name" required />
+
+            <label for="owner-name">Your Name</label>
+            <input type="text" id="owner-name" name="owner-name" required />
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="service">Select Service</label>
+            <select id="service" name="service" required>
+              <option value="Full Grooming">Full Grooming</option>
+              <option value="Bath & Brush">Bath & Brush</option>
+              <option value="Pet Spa Day">Pet Spa Day</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" name="time" required />
+
+            <button type="submit">Book Appointment</button>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 30,
+          nav: true,
+          dots: false,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: {
+              items: 2,
+            },
+            992: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
